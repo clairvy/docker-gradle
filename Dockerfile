@@ -21,9 +21,9 @@ ENV PATH $PATH:$GRADLE_HOME/bin
 # Caches
 VOLUME /root/.gradle/caches
 
-# Default command is "/usr/bin/gradle -version" on /usr/bin/app dir
-# (ie. Mount project at /usr/bin/app "docker --rm -v /path/to/app:/usr/bin/app gradle <command>")
-VOLUME /usr/bin/app
-WORKDIR /usr/bin/app
+# Default command is "/usr/bin/gradle -version" on /usr/src/app dir
+# (ie. Mount project at /usr/src/app "docker --rm -v /path/to/app:/usr/src/app gradle <command>")
+VOLUME /usr/src/app
+WORKDIR /usr/src/app
 ENTRYPOINT ["gradle"]
 CMD ["-version"]
