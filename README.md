@@ -20,6 +20,10 @@ Of course, you can use any command here, including those dependent on plugins. F
 docker run --rm -p 8080:8080 -v /path/to/your/project:/usr/src/app:rw niaquinto/gradle jettyRunWar
 ```
 
+### NOTE
+
+If you want to cache directory, use volume like "-v $(PWD)/caches:/root/.gradle/caches".
+
 ### Changing the Default Behavior
 Say you want `gradle clean war` to run if you launch the container without any options. To do that, just make a new dockerfile like the following. Also, while your at it, you should change the user to match your development environment (so that running the container doesn't keep chown'ing your /build directory to root).
 
