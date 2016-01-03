@@ -2,8 +2,9 @@ FROM java:8-jdk
 MAINTAINER Nicholas Iaquinto <nickiaq@gmail.com>
 
 # Gradle
-ENV GRADLE_VERSION 2.7
-ENV GRADLE_HASH fe801ce2166e6c5b48b3e7ba81277c41
+ENV GRADLE_VERSION 2.10
+ENV GRADLE_HASH 5b8ad24373252dabce9dead708e409f8
+
 RUN cd /usr/lib \
  && wget https://downloads.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip \
  && echo "${GRADLE_HASH} gradle-${GRADLE_VERSION}-bin.zip" | md5sum -c - \
